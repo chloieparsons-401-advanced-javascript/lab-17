@@ -1,0 +1,23 @@
+{
+  "name": "lab-17",
+  "version": "1.0.0",
+  "description": "TCP Server / Message Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint \"**/*.js\"",
+    "test-watch": "jest --watchAll",
+    "test": "jest --verbose --coverage"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chloieparsons-401-advanced-javascript/lab-17.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chloieparsons-401-advanced-javascript/lab-17/issues"
+  },
+  "homepage": "https://github.com/chloieparsons-401-advanced-javascript/lab-17#readme"
+}
