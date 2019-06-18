@@ -7,6 +7,7 @@ const server = net.createServer();
 
 server.listen(port, () => console.log(`Server up on ${port}`) );
 
+let allowedEvents = ['create', 'read'];
 let socketPool = {};
 
 server.on('connection', (socket) => {
@@ -20,8 +21,15 @@ server.on('connection', (socket) => {
 
 let dispatchEvent = (buffer) => {
   let text = buffer.toString().trim();
-  for (let socket in socketPool) {
-    socketPool[socket].write(`${event} ${text}`);
+  let payload = JSON.parse(text);
+
+  if(allowedEvents.includes(payload.name)){
+    console.log(`BROADCAST: ${payload.name}`);
+    for (let socket in socketPool) {
+      socketPool[socket].write(JSON.stringify(payload));
+    }
+  } else {
+    console.log(`IGNORE ${payload.name}`);
   }
 };
 
