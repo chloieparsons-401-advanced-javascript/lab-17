@@ -1,13 +1,14 @@
 'use strict';
 
 const net = require('net');
+const events = require('./src/events/event');
 
 const port = process.env.PORT || 3001;
 const server = net.createServer();
 
 server.listen(port, () => console.log(`Server up on ${port}`) );
 
-let allowedEvents = ['create', 'read'];
+let allowedEvents = ['save', 'error'];
 let socketPool = {};
 
 server.on('connection', (socket) => {
@@ -32,5 +33,7 @@ let dispatchEvent = (buffer) => {
     console.log(`IGNORE ${payload.name}`);
   }
 };
+
+events.on('dispatchEvent', dispatchEvent);
 
 
