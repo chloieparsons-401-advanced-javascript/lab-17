@@ -1,11 +1,12 @@
 'use strict';
 
+const fs = require('fs');
 const net = require('net');
+
 const client = new net.Socket();
 
 client.connect(3001, 'localhost', () => console.log('Socket in app.js created!'));
 
-const fs = require('fs');
 const util = require('util');
 const writeFile = util.promisify(fs.writeFile);
 const readFile = util.promisify(fs.readFile);
