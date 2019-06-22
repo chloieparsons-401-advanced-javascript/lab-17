@@ -8,7 +8,6 @@
     "lint": "eslint \"**/*.js\"",
     "test-watch": "jest --watchAll",
     "test": "jest --verbose --coverage"
-
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/chloieparsons-401-advanced-javascript/lab-17/issues"
   },
-  "homepage": "https://github.com/chloieparsons-401-advanced-javascript/lab-17#readme"
+  "homepage": "https://github.com/chloieparsons-401-advanced-javascript/lab-17#readme",
+  "dependencies": {
+    "eslint": "^6.0.0",
+    "jest": "^24.8.0"
+  }
 }
