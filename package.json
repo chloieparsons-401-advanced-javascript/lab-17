@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/chloieparsons-401-advanced-javascript/lab-17#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "eslint": "^6.0.0",
+    "events": "^3.0.0",
     "jest": "^24.8.0"
   }
 }

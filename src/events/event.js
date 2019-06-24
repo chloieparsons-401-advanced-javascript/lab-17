@@ -2,7 +2,7 @@
 
 /** @module eventEmitter  */
 
-const eventEmitter = require('event');
+const eventEmitter = require('events');
 
 const event = new eventEmitter();
 
