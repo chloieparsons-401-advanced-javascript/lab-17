@@ -5,7 +5,7 @@ const event = require('./event');
 
 const client = new net.Socket();
 
-client.connect(3001, 'localhost', () => console.log('Socket in logger.js created!'));
+client.connect(3000, 'localhost', () => console.log('Socket in logger.js created!'));
 
 // Listener
 client.on('data', (buffer) => {

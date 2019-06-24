@@ -3,7 +3,7 @@
 const net = require('net');
 const events = require('./src/events/event');
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 const server = net.createServer();
 
 server.listen(port, () => console.log(`Server up on ${port}`) );
